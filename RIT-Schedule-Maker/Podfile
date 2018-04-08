@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, ’10.0’
+
+target 'RIT-Schedule-Maker' do
+ pod ‘JTAppleCalendar’, ‘~> 7.0’
+  use_frameworks!
+
+  # Pods for RIT-Schedule-Maker
+
+  target 'RIT-Schedule-MakerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RIT-Schedule-MakerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

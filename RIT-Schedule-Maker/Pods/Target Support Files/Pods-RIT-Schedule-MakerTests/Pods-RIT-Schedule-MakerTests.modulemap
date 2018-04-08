@@ -1,0 +1,6 @@
+framework module Pods_RIT_Schedule_MakerTests {
+  umbrella header "Pods-RIT-Schedule-MakerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_RIT_Schedule_Maker {
+  umbrella header "Pods-RIT-Schedule-Maker-umbrella.h"
+
+  export *
+  module * { export * }
+}
