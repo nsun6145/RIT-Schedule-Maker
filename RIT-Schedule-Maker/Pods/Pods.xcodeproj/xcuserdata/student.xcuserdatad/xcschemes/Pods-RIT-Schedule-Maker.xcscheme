@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E0FF168455B6FDD270EA00C32FC5773"
+               BlueprintIdentifier = "892841FACE64AAAFA55CC0FC0515AFED"
                BuildableName = "Pods_RIT_Schedule_Maker.framework"
                BlueprintName = "Pods-RIT-Schedule-Maker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E0FF168455B6FDD270EA00C32FC5773"
+            BlueprintIdentifier = "892841FACE64AAAFA55CC0FC0515AFED"
             BuildableName = "Pods_RIT_Schedule_Maker.framework"
             BlueprintName = "Pods-RIT-Schedule-Maker"
             ReferencedContainer = "container:Pods.xcodeproj">

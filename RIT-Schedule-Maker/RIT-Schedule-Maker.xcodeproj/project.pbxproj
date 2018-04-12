@@ -14,11 +14,11 @@
 		3F2F7D2B207A9F95007CF2E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2F7D29207A9F95007CF2E5 /* LaunchScreen.storyboard */; };
 		3F2F7D36207A9F95007CF2E5 /* RIT_Schedule_MakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F7D35207A9F95007CF2E5 /* RIT_Schedule_MakerTests.swift */; };
 		3F2F7D41207A9F95007CF2E5 /* RIT_Schedule_MakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F7D40207A9F95007CF2E5 /* RIT_Schedule_MakerUITests.swift */; };
-		3F2F7D50207AA602007CF2E5 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F7D4F207AA602007CF2E5 /* CustomCell.swift */; };
 		3F2F7D79207AAB13007CF2E5 /* Package.swift in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2F7D78207AAB13007CF2E5 /* Package.swift */; };
 		3F529CAE207AB850000537D4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F529CAD207AB850000537D4 /* CalendarView.swift */; };
 		3F529CB0207AB85D000537D4 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F529CAF207AB85D000537D4 /* MonthView.swift */; };
 		3F529CB2207AB879000537D4 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F529CB1207AB879000537D4 /* WeekdaysView.swift */; };
+		3F6420862080188E00F20C39 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6420852080188E00F20C39 /* CustomCell.swift */; };
 		97E757A7BE0671A964B3ACDA /* Pods_RIT_Schedule_MakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC672FEC4D5A1D88D67875F4 /* Pods_RIT_Schedule_MakerTests.framework */; };
 		BF4FC8C9D23155B3CD5A79D3 /* Pods_RIT_Schedule_MakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988DA37797245E14A69F938D /* Pods_RIT_Schedule_MakerUITests.framework */; };
 		FB97E0D0E5FE86763572EE8E /* Pods_RIT_Schedule_Maker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6BD53F88914A8E544E0DD1 /* Pods_RIT_Schedule_Maker.framework */; };
@@ -57,7 +57,6 @@
 		3F2F7D3C207A9F95007CF2E5 /* RIT-Schedule-MakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RIT-Schedule-MakerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2F7D40207A9F95007CF2E5 /* RIT_Schedule_MakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIT_Schedule_MakerUITests.swift; sourceTree = "<group>"; };
 		3F2F7D42207A9F95007CF2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F2F7D4F207AA602007CF2E5 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3F2F7D52207AAA92007CF2E5 /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = "RIT-Schedule-Maker/Sources/UIScrollViewDelegates.swift"; sourceTree = "<group>"; };
 		3F2F7D53207AAA92007CF2E5 /* InternalActionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InternalActionFunctions.swift; path = "RIT-Schedule-Maker/Sources/InternalActionFunctions.swift"; sourceTree = "<group>"; };
 		3F2F7D54207AAA92007CF2E5 /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarVariables.swift; path = "RIT-Schedule-Maker/Sources/JTAppleCalendarVariables.swift"; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		3F529CAD207AB850000537D4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3F529CAF207AB85D000537D4 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		3F529CB1207AB879000537D4 /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		3F6420852080188E00F20C39 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		4350F6B20721B03B35865844 /* Pods-RIT-Schedule-MakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIT-Schedule-MakerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RIT-Schedule-MakerTests/Pods-RIT-Schedule-MakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		788B09CCAC4EB72C95FE28E9 /* Pods-RIT-Schedule-MakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIT-Schedule-MakerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RIT-Schedule-MakerTests/Pods-RIT-Schedule-MakerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A7FB4006B946450DBCB0EED /* Pods-RIT-Schedule-MakerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIT-Schedule-MakerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RIT-Schedule-MakerUITests/Pods-RIT-Schedule-MakerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 		3F2F7D1F207A9F95007CF2E5 /* RIT-Schedule-Maker */ = {
 			isa = PBXGroup;
 			children = (
-				3F2F7D4F207AA602007CF2E5 /* CustomCell.swift */,
 				3F2F7D20207A9F95007CF2E5 /* AppDelegate.swift */,
 				3F2F7D22207A9F95007CF2E5 /* ViewController.swift */,
 				3F529CAD207AB850000537D4 /* CalendarView.swift */,
@@ -154,6 +153,7 @@
 				3F2F7D27207A9F95007CF2E5 /* Assets.xcassets */,
 				3F2F7D29207A9F95007CF2E5 /* LaunchScreen.storyboard */,
 				3F2F7D2C207A9F95007CF2E5 /* Info.plist */,
+				3F6420852080188E00F20C39 /* CustomCell.swift */,
 			);
 			path = "RIT-Schedule-Maker";
 			sourceTree = "<group>";
@@ -231,7 +231,6 @@
 				3F2F7D1A207A9F95007CF2E5 /* Frameworks */,
 				3F2F7D1B207A9F95007CF2E5 /* Resources */,
 				F03579EB03DC0297B4A68A08 /* [CP] Embed Pods Frameworks */,
-				47E691712B1915A56AD0540C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,8 +249,6 @@
 				3F2F7D2D207A9F95007CF2E5 /* Sources */,
 				3F2F7D2E207A9F95007CF2E5 /* Frameworks */,
 				3F2F7D2F207A9F95007CF2E5 /* Resources */,
-				90E6E142A506CB99641DD0E9 /* [CP] Embed Pods Frameworks */,
-				AA1761DF2F49333E6C15AB12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,8 +268,6 @@
 				3F2F7D38207A9F95007CF2E5 /* Sources */,
 				3F2F7D39207A9F95007CF2E5 /* Frameworks */,
 				3F2F7D3A207A9F95007CF2E5 /* Resources */,
-				271939FB7AF4F0714F35BF84 /* [CP] Embed Pods Frameworks */,
-				6E3D80D80D769648EB2A5636 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,21 +353,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		271939FB7AF4F0714F35BF84 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RIT-Schedule-MakerUITests/Pods-RIT-Schedule-MakerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		299885F4D4DCB60D556CB092 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,66 +369,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		47E691712B1915A56AD0540C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RIT-Schedule-Maker/Pods-RIT-Schedule-Maker-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6E3D80D80D769648EB2A5636 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RIT-Schedule-MakerUITests/Pods-RIT-Schedule-MakerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90E6E142A506CB99641DD0E9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RIT-Schedule-MakerTests/Pods-RIT-Schedule-MakerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA1761DF2F49333E6C15AB12 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RIT-Schedule-MakerTests/Pods-RIT-Schedule-MakerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C89B182D0EFBBA945E1A33AD /* [CP] Check Pods Manifest.lock */ = {
@@ -476,10 +396,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RIT-Schedule-Maker/Pods-RIT-Schedule-Maker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,8 +437,8 @@
 				3F2F7D23207A9F95007CF2E5 /* ViewController.swift in Sources */,
 				3F529CB2207AB879000537D4 /* WeekdaysView.swift in Sources */,
 				3F529CB0207AB85D000537D4 /* MonthView.swift in Sources */,
-				3F2F7D50207AA602007CF2E5 /* CustomCell.swift in Sources */,
 				3F529CAE207AB850000537D4 /* CalendarView.swift in Sources */,
+				3F6420862080188E00F20C39 /* CustomCell.swift in Sources */,
 				3F2F7D21207A9F95007CF2E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
