@@ -4,7 +4,7 @@ protocol MonthViewDelegate: class {
     func didChangeMonth(monthIndex: Int, year: Int)
 }
 
-class MonthView: UIView {
+class MonthView: UIView{
     var monthsArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     var currentMonthIndex = 0
     var currentYear: Int = 0
@@ -20,6 +20,39 @@ class MonthView: UIView {
         setupViews()
         
         btnLeft.isEnabled=false
+    }
+    
+    @objc func addEventButtonAction(sender: UIButton){
+        // 1
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        
+        // 2
+        let deleteAction = UIAlertAction(title: "Add Event", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Event added")
+        })
+        let saveAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Classes added")
+           //performSegue(withIdentifier: "eventAdd", sender: self)
+            
+            
+        })
+        
+        //
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Cancelled")
+        })
+        
+        
+        // 4
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(saveAction)
+        optionMenu.addAction(cancelAction)
+        
+        // 5
+        //present(optionMenu, animated: true, completion: nil)
     }
     
     @objc func btnLeftRightAction(sender: UIButton) {
@@ -59,6 +92,15 @@ class MonthView: UIView {
         btnLeft.leftAnchor.constraint(equalTo: leftAnchor).isActive=true
         btnLeft.widthAnchor.constraint(equalToConstant: 50).isActive=true
         btnLeft.heightAnchor.constraint(equalTo: heightAnchor).isActive=true
+        
+        self.addSubview(addButton)
+        //addButton.frame = CGRect(x: 400, y: 800, width: 100, height: 100)
+        //addButton.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
+        addButton.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
+        addButton.widthAnchor.constraint(equalToConstant: 100).isActive=true
+        addButton.heightAnchor.constraint(equalTo: heightAnchor).isActive=true
+        
+        
     }
     
     let lblName: UILabel = {
@@ -87,6 +129,18 @@ class MonthView: UIView {
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
         btn.setTitleColor(UIColor.lightGray, for: .disabled)
+        return btn
+    }()
+
+    let addButton: UIButton = {
+        let btn=UIButton()
+        //btn.backgroundColor = UIColor.gray
+        btn.setTitle("+", for: .normal)
+        btn.setTitleColor(Style.monthViewBtnLeftColor, for: .normal)
+        btn.translatesAutoresizingMaskIntoConstraints=false
+        btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
+        btn.setTitleColor(UIColor.lightGray, for: .disabled)
+        
         return btn
     }()
     

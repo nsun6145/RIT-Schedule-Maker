@@ -42,14 +42,10 @@ class ViewController: UIViewController {
         calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
     }
     
-    @objc func rightBarBtnAction(sender: AnyObject) {
-        
+    @IBAction func rightBarBtnAction(sender: AnyObject) {
 
-    
-        // 1
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
-        
-        // 2
+
         let deleteAction = UIAlertAction(title: "Add Event", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Event added")
@@ -57,24 +53,22 @@ class ViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Classes added")
-            self.performSegue(withIdentifier: self.eventAdd, sender: nil)
+            self.performSegue(withIdentifier: self.eventAdd, sender: self)
+            
            
         })
-        
-        //
+
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Cancelled")
         })
         
-        
-        // 4
         optionMenu.addAction(deleteAction)
         optionMenu.addAction(saveAction)
         optionMenu.addAction(cancelAction)
         
-        // 5
-        self.present(optionMenu, animated: true, completion: nil)
+     
+        present(optionMenu, animated: true, completion: nil)
         
 //        if theme == .dark {
 //            sender.title = "Dark"
@@ -94,42 +88,13 @@ class ViewController: UIViewController {
         v.translatesAutoresizingMaskIntoConstraints=false
         return v
     }()
- 
-    
+
+    //FIX: Event view to be displayed
+    let eventView: EventView = {
+        let v = EventView()
+        return v
+    }()
     
 }
-
-
-
-
-
-
-//JTAppleCalendar
-
-//extension ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource{
-//    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-//
-//    }
-
-//    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-//        formatter.dateFormat = "yyyy MM dd"
-//        formatter.timeZone = Calendar.current.timeZone
-//        formatter.locale = Calendar.current .locale
-//
-//        let startDate = formatter.date(from: "2017 01 01")!
-//        let endDate = formatter.date(from: "2017 12 31")!
-//
-//        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
-//        return parameters
-//    }
-//
-//    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-//        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "Custom Cell", for: indexPath) as! CustomCell
-//        cell.dateLabel.text = cellState.text
-//        print(cellState.text)
-//        return cell
-//    }
-//
-//}
 
 
