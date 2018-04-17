@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = self.window {
             window.backgroundColor = UIColor.white
             let nav = UINavigationController()
-            let mainView = ViewController()
+            //let mainView = ViewController()
+            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+            let mainView = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             nav.viewControllers = [mainView]
             window.rootViewController = nav
             window.makeKeyAndVisible()

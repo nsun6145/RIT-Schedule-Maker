@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RIT_Schedule_Maker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="RIT_Schedule_Maker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
         <!--EventAdd-->
         <scene sceneID="9jI-pC-ezo">
             <objects>
-                <viewController storyboardIdentifier="eventAdd" title="EventAdd" id="nz3-gn-37b" customClass="EventAddVC" customModule="RIT_Schedule_Maker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventAdd" title="EventAdd" id="nz3-gn-37b" customClass="EventAddVC" customModule="RIT_Schedule_Maker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fa7-rj-EDM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,8 +72,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="phB-5g-cCM">
-                                <rect key="frame" x="28" y="208" width="320" height="216"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="phB-5g-cCM">
+                                <rect key="frame" x="27" y="200" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="545534216.72904801">
                                     <!--2018-04-16 01:16:56 +0000-->
                                 </date>

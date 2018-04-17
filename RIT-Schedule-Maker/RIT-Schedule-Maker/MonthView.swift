@@ -21,7 +21,7 @@ class MonthView: UIView{
         
         btnLeft.isEnabled=false
     }
-    
+    /*
     @objc func addEventButtonAction(sender: UIButton){
         // 1
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
@@ -54,7 +54,7 @@ class MonthView: UIView{
         // 5
         //present(optionMenu, animated: true, completion: nil)
     }
-    
+    */
     @objc func btnLeftRightAction(sender: UIButton) {
         if sender == btnRight {
             currentMonthIndex += 1

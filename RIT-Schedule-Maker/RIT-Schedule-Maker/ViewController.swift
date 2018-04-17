@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         self.view.backgroundColor=Style.bgColor
         
         view.addSubview(calenderView)
+        //calenderView.backgroundColor = UIColor.green
         calenderView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive=true
         calenderView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12).isActive=true
         calenderView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive=true
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
         calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
     }
     
-    @IBAction func rightBarBtnAction(sender: AnyObject) {
+    @objc func rightBarBtnAction(sender: AnyObject) {
 
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
 
@@ -53,9 +54,12 @@ class ViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Classes added")
-            self.performSegue(withIdentifier: self.eventAdd, sender: self)
+            let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+            let eventAddVC = storyBoard.instantiateViewController(withIdentifier: "EventAdd") as! EventAddVC
+            let navController = UINavigationController.init(rootViewController: eventAddVC)
+            self.present(navController, animated: true, completion: nil)
+            //self.performSegue(withIdentifier: self.eventAdd, sender: self)
             
-           
         })
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
