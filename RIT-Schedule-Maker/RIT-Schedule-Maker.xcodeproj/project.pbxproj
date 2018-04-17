@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29442FF420856B1F00D6A448 /* EventAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29442FF320856B1F00D6A448 /* EventAddVC.swift */; };
 		3F2F7D21207A9F95007CF2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F7D20207A9F95007CF2E5 /* AppDelegate.swift */; };
 		3F2F7D23207A9F95007CF2E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F7D22207A9F95007CF2E5 /* ViewController.swift */; };
 		3F2F7D26207A9F95007CF2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2F7D24207A9F95007CF2E5 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29442FF320856B1F00D6A448 /* EventAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAddVC.swift; sourceTree = "<group>"; };
 		2B173F39F43AC90363F6883A /* Pods-RIT-Schedule-Maker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIT-Schedule-Maker.release.xcconfig"; path = "Pods/Target Support Files/Pods-RIT-Schedule-Maker/Pods-RIT-Schedule-Maker.release.xcconfig"; sourceTree = "<group>"; };
 		35CD6E9D15DAD14D57C7FAD4 /* Pods-RIT-Schedule-MakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIT-Schedule-MakerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RIT-Schedule-MakerUITests/Pods-RIT-Schedule-MakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F2F7D1D207A9F95007CF2E5 /* RIT-Schedule-Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RIT-Schedule-Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				3F529CAD207AB850000537D4 /* CalendarView.swift */,
 				3F529CAF207AB85D000537D4 /* MonthView.swift */,
 				3F529CB1207AB879000537D4 /* WeekdaysView.swift */,
+				29442FF320856B1F00D6A448 /* EventAddVC.swift */,
 				3F2F7D24207A9F95007CF2E5 /* Main.storyboard */,
 				3F2F7D27207A9F95007CF2E5 /* Assets.xcassets */,
 				3F2F7D29207A9F95007CF2E5 /* LaunchScreen.storyboard */,
@@ -438,6 +441,7 @@
 				3F529CB2207AB879000537D4 /* WeekdaysView.swift in Sources */,
 				3F529CB0207AB85D000537D4 /* MonthView.swift in Sources */,
 				3F529CAE207AB850000537D4 /* CalendarView.swift in Sources */,
+				29442FF420856B1F00D6A448 /* EventAddVC.swift in Sources */,
 				3F6420862080188E00F20C39 /* CustomCell.swift in Sources */,
 				3F2F7D21207A9F95007CF2E5 /* AppDelegate.swift in Sources */,
 			);

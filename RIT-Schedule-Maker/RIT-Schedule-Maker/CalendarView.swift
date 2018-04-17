@@ -126,6 +126,16 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         cell?.backgroundColor=Colors.darkGrey
         let lbl = cell?.subviews[1] as! UILabel
         lbl.textColor=UIColor.white
+        
+//        var selectedPosition: CGColor
+//        switch selectedPosition {
+//            //only one is tapped
+//
+//            //multiple ones are tapped
+//
+//        default:
+//            <#code#>
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
