@@ -209,6 +209,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         myCollectionView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive=true
         myCollectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive=true
         myCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
+        
+        addSubview(eventView);
  
  }
     
@@ -234,6 +236,12 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         myCollectionView.backgroundColor=UIColor.clear
         myCollectionView.allowsMultipleSelection=false
         return myCollectionView
+    }()
+    
+    let eventView: EventView = {
+        let e = EventView()
+        e.translatesAutoresizingMaskIntoConstraints = false
+        return e
     }()
     
     required init?(coder aDecoder: NSCoder) {
