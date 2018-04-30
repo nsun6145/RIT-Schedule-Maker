@@ -1,8 +1,17 @@
 import UIKit
 
+struct Event{
+    var month: Int
+    var day: Int
+}
+
 struct Colors {
     static var darkBlue = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
     static var darkGrey = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+}
+
+struct DateEvent{
+    var years = [Int: Event].self
 }
 
 struct Style {

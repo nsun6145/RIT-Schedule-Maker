@@ -64,8 +64,6 @@
         <!--EventAdd-->
         <scene sceneID="Xxm-Y6-ugY">
             <objects>
-                <exit id="sxh-Df-GPS" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e4D-8K-a7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="EventAdd" title="EventAdd" id="pGk-PB-j2E" customClass="EventAddVC" customModule="RIT_Schedule_Maker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdh-My-JiG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -105,9 +103,8 @@
                                     <!--2018-04-16 01:16:56 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-qC-JZu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-qC-JZu">
                                 <rect key="frame" x="161" y="529" width="52" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
@@ -119,12 +116,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GfY-qC-JZu" firstAttribute="top" secondItem="brG-jn-Vie" secondAttribute="bottom" constant="74" id="Qly-mu-1NY"/>
                             <constraint firstItem="brG-jn-Vie" firstAttribute="centerX" secondItem="r6k-Vv-s2c" secondAttribute="centerX" id="edC-dD-sFc"/>
+                            <constraint firstItem="GfY-qC-JZu" firstAttribute="centerX" secondItem="brG-jn-Vie" secondAttribute="centerX" id="lsl-Gi-l53"/>
                             <constraint firstItem="brG-jn-Vie" firstAttribute="centerY" secondItem="r6k-Vv-s2c" secondAttribute="centerY" constant="-18.5" id="vhi-Tt-baj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r6k-Vv-s2c"/>
                     </view>
                 </viewController>
+                <exit id="sxh-Df-GPS" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4D-8K-a7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1276" y="-259"/>
         </scene>
