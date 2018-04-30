@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     var theme = MyTheme.dark
     let eventAdd = "eventAdd"
     
+    @IBOutlet weak var addTable: UITableView!
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        performSegue(withIdentifier: "backButton", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +37,7 @@ class ViewController: UIViewController {
 //        let rightBarBtn = UIBarButtonItem(title: "Light", style: .plain, target: self, action: #selector(rightBarBtnAction))
 //        self.navigationItem.rightBarButtonItem = rightBarBtn
         
-        let addItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(rightBarBtnAction))
+        let addItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(rightBarBtnAction))
        self.navigationItem.rightBarButtonItem = addItem
  
  }
@@ -47,11 +53,11 @@ class ViewController: UIViewController {
 
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
 
-        let deleteAction = UIAlertAction(title: "Add Event", style: .default, handler: {
+        let deleteAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Event added")
         })
-        let saveAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
+        let saveAction = UIAlertAction(title: "Add Events", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Classes added")
             let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -98,6 +104,16 @@ class ViewController: UIViewController {
         let v = EventView()
         return v
     }()
+    
+//    @IBAction func backTapped(segue: UIStoryboardSegue) {
+////        performSegue(withIdentifier: backToCalendar, sender: nil)
+//        
+//    }
+//    @IBAction func backBack(_ sender: Any) {
+//        self.performSegue(withIdentifier: backToMain, sender: nil)
+//        
+//    }
+    
     
 }
 
