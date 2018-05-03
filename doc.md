@@ -1,4 +1,4 @@
-**Code to make calendar itself was based off of Akhilendra's iOS Calendar tutorial. He has given permission for it to be used for free in projects.**
+**Code to make calendar itself was written alongside Akhilendra's iOS Calendar tutorial. He has given permission for code written from tutorial to be used for free in projects**
 https://github.com/Akhilendra/calenderAppiOS
 
 
@@ -14,7 +14,11 @@ https://github.com/Akhilendra/calenderAppiOS
 
 *Trying to figure out how to set up so each individual day to have its own table was a giant headache.
 
-*Only one of us (Lydia) actually owned a mac, so consistency of work was hard to coordinate
+*Only one of us (Lydia) actually owned a mac, so consistency of work was hard to coordinate.
+
+*Constant shifting of how to approach project led to time consumption.
+
+*We overscoped. Hard.
 
 ## Work
 
@@ -23,3 +27,4 @@ https://github.com/Akhilendra/calenderAppiOS
 *Lydia: View setup
 
 *Both: Code for table functionality & event adding
+
