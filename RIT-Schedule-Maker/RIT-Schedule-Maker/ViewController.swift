@@ -1,3 +1,8 @@
+//WORST CASES
+//1. list everything in a table view (get rid of the action sheet)
+//2. attch to the default calendar
+
+
 import UIKit
 //import JTAppleCalendar
 import EventKit
@@ -7,12 +12,80 @@ enum MyTheme {
     case dark
 }
 
-class ViewController: UIViewController {
+//create new events and assign it the table view
+struct EventList{
+    
+    //var name : String
+    //var time: " "
+    
+    
+    
+//    var events = Set<EventData>
+}
+
+//All Event Data
+//[year:[month:[day:[Events]]]]
+struct EventStore{
+    var years = [2018: [
+        1: [        //Month
+            1:[   //Day
+                //Event data list
+            ]
+        ]
+        ]
+    ]
+}
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    let events11 = "events"
+    
+    
+    
+    var events = [EventData]()
     
     let formatter = DateFormatter()
     var theme = MyTheme.dark
     let eventAdd = "eventAdd"
     
+    @IBOutlet weak var addTable: UITableView!
+    
+    //delegateSource
+    var events1 : [String] = []
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events1.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: events11, for: indexPath)
+        cell.textLabel?.text = events1[indexPath.row]
+        return cell
+    }
+    
+    
+//    @IBOutlet weak var addSampleEvent: UIButton!
+    @IBAction func addSampleEvent(_ sender: UIButton) {
+        //add sample event to table
+        let name:String = "IGME 420"
+        events1.insert(name, at: 0)
+        let indexPath: IndexPath = IndexPath(row: 0, section: 0)
+        addTable.insertRows(at: [indexPath], with: .automatic)
+       
+    }
+    
+    @IBAction func finishButton(_ sender: Any) {
+        /* if years[currentMonth:[currentDay]] = nil
+         years[currentMonth:[currentDay]] = EventList()
+         */
+        
+        //years[currentMonth:[currentDay]].insert(eventData)
+        //add data collected in fields to table
+
+        performSegue(withIdentifier: "backButton", sender: self)
+    }
+    @IBAction func backButton(_ sender: Any) {
+        performSegue(withIdentifier: "backButton", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +104,7 @@ class ViewController: UIViewController {
 //        let rightBarBtn = UIBarButtonItem(title: "Light", style: .plain, target: self, action: #selector(rightBarBtnAction))
 //        self.navigationItem.rightBarButtonItem = rightBarBtn
         
-        let addItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(rightBarBtnAction))
+        let addItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(rightBarBtnAction))
        self.navigationItem.rightBarButtonItem = addItem
  
  }
@@ -47,11 +120,11 @@ class ViewController: UIViewController {
 
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
 
-        let deleteAction = UIAlertAction(title: "Add Event", style: .default, handler: {
+        let deleteAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Event added")
         })
-        let saveAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
+        let saveAction = UIAlertAction(title: "Add Events", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("Classes added")
             let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -98,6 +171,19 @@ class ViewController: UIViewController {
         let v = EventView()
         return v
     }()
+    
+    
+    
+    
+//    @IBAction func backTapped(segue: UIStoryboardSegue) {
+////        performSegue(withIdentifier: backToCalendar, sender: nil)
+//        
+//    }
+//    @IBAction func backBack(_ sender: Any) {
+//        self.performSegue(withIdentifier: backToMain, sender: nil)
+//        
+//    }
+    
     
 }
 

@@ -24,6 +24,9 @@ class WeekdaysView: UIView {
             lbl.textAlignment = .center
             lbl.textColor = Style.weekdaysLblColor
             myStackView.addArrangedSubview(lbl)
+            
+            
+            
         }
     }
     

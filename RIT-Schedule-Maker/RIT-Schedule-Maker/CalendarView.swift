@@ -5,6 +5,7 @@ struct Colors {
     static var darkGrey = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
 }
 
+
 struct Style {
     static var bgColor = UIColor.white
     static var monthViewLblColor = UIColor.white
@@ -123,22 +124,16 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         }
         return cell
     }
-    
+   //clicks
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=Colors.darkGrey
         let lbl = cell?.subviews[1] as! UILabel
         lbl.textColor=UIColor.white
         
-//        var selectedPosition: CGColor
-//        switch selectedPosition {
-//            //only one is tapped
-//
-//            //multiple ones are tapped
-//
-//        default:
-//            <#code#>
-//        }
+        //Load events to table here
+        
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

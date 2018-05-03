@@ -21,40 +21,7 @@ class MonthView: UIView{
         
         btnLeft.isEnabled=false
     }
-    /*
-    @objc func addEventButtonAction(sender: UIButton){
-        // 1
-        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
-        
-        // 2
-        let deleteAction = UIAlertAction(title: "Add Event", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            print("Event added")
-        })
-        let saveAction = UIAlertAction(title: "Add Classes", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            print("Classes added")
-           //performSegue(withIdentifier: "eventAdd", sender: self)
-            
-            
-        })
-        
-        //
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            (alert: UIAlertAction!) -> Void in
-            print("Cancelled")
-        })
-        
-        
-        // 4
-        optionMenu.addAction(deleteAction)
-        optionMenu.addAction(saveAction)
-        optionMenu.addAction(cancelAction)
-        
-        // 5
-        //present(optionMenu, animated: true, completion: nil)
-    }
-    */
+    
     @objc func btnLeftRightAction(sender: UIButton) {
         if sender == btnRight {
             currentMonthIndex += 1
@@ -93,12 +60,7 @@ class MonthView: UIView{
         btnLeft.widthAnchor.constraint(equalToConstant: 50).isActive=true
         btnLeft.heightAnchor.constraint(equalTo: heightAnchor).isActive=true
         
-        self.addSubview(addButton)
-        //addButton.frame = CGRect(x: 400, y: 800, width: 100, height: 100)
-        //addButton.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
-        addButton.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
-        addButton.widthAnchor.constraint(equalToConstant: 100).isActive=true
-        addButton.heightAnchor.constraint(equalTo: heightAnchor).isActive=true
+        
         
         
     }
