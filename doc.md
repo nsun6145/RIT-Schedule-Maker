@@ -4,16 +4,22 @@ https://github.com/Akhilendra/calenderAppiOS
 
 # RIT-Schedule-Maker
 
-## Features to implement
+## Features
+*Functioning calendar with days that highlight
 
-### Important
-*Event/Class search
-*Basic day schedule per day with items
-*Add events
-*Tap to show a schedule
-*Shift to and from Week view
+*Event adding (Name of event and time of it)
 
-### Non-Important
-*Course-only view
-*Notifications
-*Marks for days that have events
+## Difficulties
+*Cocoapods was considered (JTCalendar), but its instructions were too inconsistent to be relied on and it was scrapped. Unfourtanately, this cost us a lot of time.
+
+*Trying to figure out how to set up so each individual day to have its own table was a giant headache.
+
+*Only one of us (Lydia) actually owned a mac, so consistency of work was hard to coordinate
+
+## Work
+
+*Nathan: Calendar Structure & Design
+
+*Lydia: View setup
+
+*Both: Code for table functionality & event adding
