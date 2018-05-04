@@ -1,3 +1,8 @@
+////
+// Written by Nathan
+//Based off calendar tutorial
+////
+
 import UIKit
 
 protocol MonthViewDelegate: class {
@@ -10,6 +15,7 @@ class MonthView: UIView{
     var currentYear: Int = 0
     var delegate: MonthViewDelegate?
     
+    //sets up month component area
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor=UIColor.clear
@@ -22,6 +28,7 @@ class MonthView: UIView{
         btnLeft.isEnabled=false
     }
     
+    //handles shifiting of months
     @objc func btnLeftRightAction(sender: UIButton) {
         if sender == btnRight {
             currentMonthIndex += 1
@@ -60,11 +67,9 @@ class MonthView: UIView{
         btnLeft.widthAnchor.constraint(equalToConstant: 50).isActive=true
         btnLeft.heightAnchor.constraint(equalTo: heightAnchor).isActive=true
         
-        
-        
-        
     }
     
+    //placements of buttons
     let lblName: UILabel = {
         let lbl=UILabel()
         lbl.text="Default Month Year text"
@@ -91,17 +96,6 @@ class MonthView: UIView{
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
         btn.setTitleColor(UIColor.lightGray, for: .disabled)
-        return btn
-    }()
-
-    let addButton: UIButton = {
-        let btn=UIButton()
-        btn.setTitle("+", for: .normal)
-        btn.setTitleColor(Style.monthViewBtnLeftColor, for: .normal)
-        btn.translatesAutoresizingMaskIntoConstraints=false
-        btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
-        btn.setTitleColor(UIColor.lightGray, for: .disabled)
-        
         return btn
     }()
     

@@ -25,6 +25,7 @@ class EventAddVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //prepare for entries into tables
     override func prepare( for segue: UIStoryboardSegue, sender: Any?){
         let name = (eventName.text?.count)! > 0 ? eventName.text!: "No title entered"
         var dateTxt : String

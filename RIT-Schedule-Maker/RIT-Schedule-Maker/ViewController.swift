@@ -1,4 +1,6 @@
-
+////
+//Written by: Nathan & Lydia
+////
 import UIKit
 //import JTAppleCalendar
 import EventKit

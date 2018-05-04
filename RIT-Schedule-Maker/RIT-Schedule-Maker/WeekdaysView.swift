@@ -1,4 +1,7 @@
-
+////
+// Written by Nathan
+//Based off calendar tutorial
+////
 import UIKit
 
 class WeekdaysView: UIView {
@@ -17,6 +20,7 @@ class WeekdaysView: UIView {
         myStackView.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
         myStackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
         
+        //writes in the days
         var daysArr = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
         for i in 0..<7 {
             let lbl=UILabel()
@@ -28,6 +32,7 @@ class WeekdaysView: UIView {
         }
     }
     
+    //spacing of days
     let myStackView: UIStackView = {
         let stackView=UIStackView()
         stackView.distribution = .fillEqually

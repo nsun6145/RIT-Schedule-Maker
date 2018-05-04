@@ -1,11 +1,17 @@
+////
+// Written by Nathan
+//Based off calendar tutorial
+////
+
 import UIKit
 
+//colors for calendar
 struct Colors {
     static var darkBlue = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
     static var darkGrey = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
 }
 
-
+//manages visual style of calendar
 struct Style {
     static var bgColor = UIColor.white
     static var monthViewLblColor = UIColor.white
@@ -76,6 +82,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         }
     }
     
+    //initializes view by looping through an int inside a month array
     func initializeView() {
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())
@@ -105,6 +112,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         return numOfDaysInMonth[currentMonthIndex-1] + firstWeekDayOfMonth - 1
     }
     
+    //date accuracy calculation
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
         cell.backgroundColor=UIColor.clear
@@ -124,6 +132,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         }
         return cell
     }
+    
+    //for selected day
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=Colors.darkGrey
@@ -133,6 +143,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
 
     }
     
+    //un-highlights a date when not selected
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=UIColor.clear
@@ -140,12 +151,14 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         lbl.textColor = Style.activeCellLblColor
     }
     
+    //height of collection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width/7 - 8
         let height: CGFloat = 40
         return CGSize(width: width, height: height)
     }
     
+    //spacing
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8.0
     }
@@ -203,7 +216,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         myCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
  
  }
-    
+  
+    //sets up month and weekday views
     let monthView: MonthView = {
         let v=MonthView()
         v.translatesAutoresizingMaskIntoConstraints=false
