@@ -9,21 +9,8 @@
 import Foundation
 import UIKit
 
-
-protocol EventDataDelegate{
-    func addData()
-    
-}
-
 class EventData{
     
-    //@IBOutlet weak var eventName: UITextField!
-
-    
-    var delegate : EventDataDelegate?
-    //static let shared = EventData()
-    
-    //IBOutlets
     var date: String
     var eventName: String
     

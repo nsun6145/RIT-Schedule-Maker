@@ -37,11 +37,11 @@ struct EventStore{
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+
+    
+    
     let events11 = "events"
-    
-    
-    
-    var events = [EventData]()
     
     let formatter = DateFormatter()
     var theme = MyTheme.dark
@@ -50,28 +50,46 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var addTable: UITableView!
     
     //delegateSource
-    var events1 : [String] = []
+    var events : [EventData] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events1.count
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: events11, for: indexPath)
-        cell.textLabel?.text = events1[indexPath.row]
+        //cell.textLabel?.text = events1[indexPath.row]
+        let event = events[indexPath.row]
+        cell.textLabel?.text = event.eventName
         return cell
     }
     
-    
-//    @IBOutlet weak var addSampleEvent: UIButton!
-    @IBAction func addSampleEvent(_ sender: UIButton) {
-        //add sample event to table
-        let name:String = "IGME 420"
-        events1.insert(name, at: 0)
-        let indexPath: IndexPath = IndexPath(row: 0, section: 0)
-        addTable.insertRows(at: [indexPath], with: .automatic)
-       
+    @IBAction func addEventButton(segue:UIStoryboardSegue){
+        
+        if let addEventVC = segue.source as? EventAddVC{
+            if let event = addEventVC.event{
+                //events.append(event)
+                events.insert(event, at: 0)
+                let indexPath: IndexPath = IndexPath(row: 0, section: 0)
+                addTable.insertRows(at: [indexPath], with: .automatic)
+            }
+        }
+        
+        //performSegue(withIdentifier: "backButton", sender: self)
     }
+    
+    
+    /*
+     //    @IBOutlet weak var addSampleEvent: UIButton!
+     @IBAction func addSampleEvent(_ sender: UIButton) {
+     //add sample event to table
+     let name:String = "IGME 420"
+     events1.insert(name, at: 0)
+     let indexPath: IndexPath = IndexPath(row: 0, section: 0)
+     addTable.insertRows(at: [indexPath], with: .automatic)
+     
+     }
+     */
     
     @IBAction func finishButton(_ sender: Any) {
         /* if years[currentMonth:[currentDay]] = nil
@@ -80,7 +98,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //years[currentMonth:[currentDay]].insert(eventData)
         //add data collected in fields to table
-
+    
         performSegue(withIdentifier: "backButton", sender: self)
     }
     @IBAction func backButton(_ sender: Any) {

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:EventData.swift">
-   </FileRef>
-   <FileRef
       location = "group:RIT-Schedule-Maker.xcodeproj">
    </FileRef>
    <FileRef
