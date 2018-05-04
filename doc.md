@@ -21,7 +21,7 @@ https://github.com/Akhilendra/calenderAppiOS
 
 ## Work
 
-* Nathan: Calendar Structure & Design
+* Nathan: Calendar Structure; Design; Date & Text adding
 
 * Lydia: View setup
 
