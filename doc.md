@@ -17,7 +17,9 @@ https://github.com/Akhilendra/calenderAppiOS
 
 * Constant shifting of how to approach project led to time consumption.
 
-* We over scoped. Hard. We could not successfully insert event data to each cell (to each day, in our case).
+* We over scoped. Hard. We could not successfully insert event data. However, because of the time limitation, we did not have enough time to finish the dictionaries to make each day as a cell and insert data to each cell.
+
+* The calendar would not save any data. When shut down the app totally, the data would not be saved. This is because we don't have enough time to work on the json file to install data. If time is longer, we will finish the data installing.
 
 ## Work
 
@@ -44,7 +46,8 @@ https://github.com/Akhilendra/calenderAppiOS
 ### Protorype schedule maker
 ![screenshot3](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/Picture1.png)
 ![screenshot4](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/Picture2.png)
+* We made the basic functions of a schedule maker done, it is able to add new default things to the table view.
 ### Final Step
 ![screenshots1](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/3333.png)
 ![screenshots2](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/4444.png)
-
+* it is able to create new events and store it into the table view with the date. 
