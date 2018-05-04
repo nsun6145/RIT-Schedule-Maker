@@ -96,7 +96,6 @@ class MonthView: UIView{
 
     let addButton: UIButton = {
         let btn=UIButton()
-        //btn.backgroundColor = UIColor.gray
         btn.setTitle("+", for: .normal)
         btn.setTitleColor(Style.monthViewBtnLeftColor, for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints=false

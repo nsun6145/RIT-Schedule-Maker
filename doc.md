@@ -2,18 +2,45 @@
 https://github.com/Akhilendra/calenderAppiOS
 
 
-# RIT-Schedule-Maker
+# Schedule-Maker
 
-## Features to implement
+## Features
+* Functioning calendar with days that highlight
+* Event adding (Name of event and time of it)
 
-### Important
-*Event/Class search
-*Basic day schedule per day with items
-*Add events
-*Tap to show a schedule
-*Shift to and from Week view
+## Difficulties
+* Cocoapods was considered (JTCalendar), but its instructions were too inconsistent to be relied on and it was scrapped. Unfortunately, this cost us a lot of time.
 
-### Non-Important
-*Course-only view
-*Notifications
-*Marks for days that have events
+* Trying to figure out how to set up so each individual day to have its own table was a giant headache.
+
+* Only one of us (Lydia) actually owned a mac, so consistency of work was hard to coordinate.
+
+* Constant shifting of how to approach project led to time consumption.
+
+* We over scoped. Hard. We could not successfully insert event data to each cell (to each day, in our case).
+
+## Work
+
+* Nathan: Calendar Structure & Design
+
+* Lydia: View setup
+
+* Both: Code for table functionality & event adding
+
+## Source used
+* We used the Lynda.com to learn how to insert new data into the table view
+* The basic calendar is copied from Akhilendra's iOS Calendar tutorial, the developer of this calendar has given permission for code written from tutorial to be used for free in projects.
+* We were intended to use JTAppleCalendar, but it did not went well.
+* We spent extra time on making the storyboard of the calendar (which was created programmatically) and the storyboard of the table view (which was created through the storyboard) at the same time.
+
+## Images
+* App icon by Lydia
+
+## Self score
+* 80%-85%.
+* Reason: Although we did not able to go far, we make the basic functionalities work (make the calendar show, add events), and our app does not crash.
+
+## Screenshots
+![screenshots1](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/3333.png)
+![screenshots2](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/4444.png)
+

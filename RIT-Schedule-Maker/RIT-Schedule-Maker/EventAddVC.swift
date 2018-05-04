@@ -11,12 +11,12 @@ import UIKit
 class EventAddVC: UIViewController {
 
     var event:EventData?
-    @IBOutlet weak var eventName: UITextField!
+    //@IBOutlet weak var eventName: UITextField!
    @IBOutlet weak var date: UIDatePicker!
-
+    @IBOutlet weak var eventName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

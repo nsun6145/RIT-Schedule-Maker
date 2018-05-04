@@ -124,15 +124,12 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         }
         return cell
     }
-   //clicks
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor=Colors.darkGrey
         let lbl = cell?.subviews[1] as! UILabel
         lbl.textColor=UIColor.white
-        
-        //Load events to table here
-        
+
 
     }
     
@@ -291,17 +288,4 @@ extension String {
         return String.dateFormatter.date(from: self)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

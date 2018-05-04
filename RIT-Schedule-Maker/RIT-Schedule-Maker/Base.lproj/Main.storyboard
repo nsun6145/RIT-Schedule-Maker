@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,18 +36,6 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="KdO-do-8tf"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-EF-vs9">
-                                <rect key="frame" x="315" y="407" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addSampleEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pCA-pB-R89"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,7 +49,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="60P-NN-p59"/>
                     <navigationItem key="navigationItem" id="ppK-9N-x3m"/>
                     <connections>
-                        <outlet property="addTable" destination="odo-gW-ZqH" id="dWP-Hv-4YJ"/>
+                        <outlet property="eventTable" destination="odo-gW-ZqH" id="dWP-Hv-4YJ"/>
                         <segue destination="pGk-PB-j2E" kind="show" identifier="eventAdd" id="qQU-aO-FAF"/>
                     </connections>
                 </viewController>
@@ -100,9 +89,20 @@
                                     <!--2018-04-16 01:16:56 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-qC-JZu">
-                                <rect key="frame" x="161" y="529" width="52" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-ET-HMS">
+                                <rect key="frame" x="112.5" y="155" width="254.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-PF-6ww" userLabel="Event Name:">
+                                <rect key="frame" x="9" y="155" width="101.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-qC-JZu">
+                                <rect key="frame" x="315" y="64" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
@@ -110,31 +110,26 @@
                                     <segue destination="sxh-Df-GPS" kind="unwind" unwindAction="addEventButtonWithSegue:" id="2EK-uP-9dY"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-ET-HMS">
-                                <rect key="frame" x="115" y="155" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXr-PF-6ww">
-                                <rect key="frame" x="9" y="155" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="brG-jn-Vie" firstAttribute="centerX" secondItem="r6k-Vv-s2c" secondAttribute="centerX" id="edC-dD-sFc"/>
-                            <constraint firstItem="brG-jn-Vie" firstAttribute="centerY" secondItem="r6k-Vv-s2c" secondAttribute="centerY" constant="-18.5" id="vhi-Tt-baj"/>
+                            <constraint firstItem="XXr-PF-6ww" firstAttribute="top" secondItem="r6k-Vv-s2c" secondAttribute="top" constant="91" id="0cC-XT-qjY"/>
+                            <constraint firstItem="brG-jn-Vie" firstAttribute="centerX" secondItem="gdh-My-JiG" secondAttribute="centerX" id="5hv-Ur-beS"/>
+                            <constraint firstItem="PkT-ET-HMS" firstAttribute="trailing" secondItem="GfY-qC-JZu" secondAttribute="trailing" id="IYV-r1-Cmi"/>
+                            <constraint firstItem="brG-jn-Vie" firstAttribute="top" secondItem="XXr-PF-6ww" secondAttribute="bottom" constant="54" id="JVu-o7-T6C"/>
+                            <constraint firstItem="GfY-qC-JZu" firstAttribute="top" secondItem="r6k-Vv-s2c" secondAttribute="top" id="NIX-qc-Miv"/>
+                            <constraint firstItem="PkT-ET-HMS" firstAttribute="bottom" secondItem="XXr-PF-6ww" secondAttribute="bottom" id="Yhi-Gc-m2M"/>
+                            <constraint firstItem="GfY-qC-JZu" firstAttribute="trailing" secondItem="gdh-My-JiG" secondAttribute="trailingMargin" constant="8" id="bT0-9J-VZz"/>
+                            <constraint firstItem="PkT-ET-HMS" firstAttribute="leading" secondItem="XXr-PF-6ww" secondAttribute="trailing" constant="2" id="cn9-58-2mL"/>
+                            <constraint firstItem="PkT-ET-HMS" firstAttribute="top" secondItem="XXr-PF-6ww" secondAttribute="top" id="gMR-WR-FFk"/>
+                            <constraint firstItem="XXr-PF-6ww" firstAttribute="leading" secondItem="r6k-Vv-s2c" secondAttribute="leading" constant="9" id="jqE-b6-JN1"/>
+                            <constraint firstItem="GfY-qC-JZu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gdh-My-JiG" secondAttribute="leadingMargin" id="mfF-j4-yNB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r6k-Vv-s2c"/>
                     </view>
                     <connections>
                         <outlet property="date" destination="brG-jn-Vie" id="4VM-3C-RX2"/>
-                        <outlet property="eventName" destination="PkT-ET-HMS" id="Zy2-dB-ina"/>
+                        <outlet property="eventName" destination="PkT-ET-HMS" id="8DL-Jo-MAF"/>
                     </connections>
                 </viewController>
                 <exit id="sxh-Df-GPS" userLabel="Exit" sceneMemberID="exit"/>
