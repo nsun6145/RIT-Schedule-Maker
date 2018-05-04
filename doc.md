@@ -41,10 +41,10 @@ https://github.com/Akhilendra/calenderAppiOS
 * Reason: Although we did not able to go far, we make the basic functionalities work (make the calendar show, add events), and our app does not crash.
 
 ## Screenshots
-# Protorype schedule maker
+### Protorype schedule maker
 ![screenshot3](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/Picture1.png)
 ![screenshot4](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/Picture2.png)
-# Final Step
+### Final Step
 ![screenshots1](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/3333.png)
 ![screenshots2](https://github.com/nsun6145/RIT-Schedule-Maker/blob/master/4444.png)
 
